@@ -1,17 +1,39 @@
 # See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
-# compiled output
-dist
-tmp
-out-tsc
+# ── Build outputs ────────────────────────────────────────────────────────────
+dist/
+tmp/
+out-tsc/
 *.tsbuildinfo
-.expo
-.expo-shared
 
-# dependencies
-node_modules
+# ── Dependencies ─────────────────────────────────────────────────────────────
+node_modules/
 
-# IDEs and editors
+# ── Expo ─────────────────────────────────────────────────────────────────────
+.expo/
+.expo-shared/
+
+# ── Environment & secrets ─────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Database ─────────────────────────────────────────────────────────────────
+*.sqlite
+*.sqlite3
+drizzle/
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-error.log
+pnpm-debug.log*
+testem.log
+
+# ── Coverage ─────────────────────────────────────────────────────────────────
+/coverage/
+
+# ── IDEs & editors ───────────────────────────────────────────────────────────
 /.idea
 .project
 .classpath
@@ -19,31 +41,27 @@ node_modules
 *.launch
 .settings/
 *.sublime-workspace
-
-# IDE - VSCode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
-
-# System Files
+# ── OS files ─────────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
 
+# ── Misc ──────────────────────────────────────────────────────────────────────
+/.sass-cache
+/connect.lock
+/libpeerconnection.log
+/typings
+
+# ── Cursor / GitHub Copilot generated files ──────────────────────────────────
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md
 
-# Replit
+# ── Replit-managed (do not commit) ───────────────────────────────────────────
 .cache/
 .local/
+.agents/
